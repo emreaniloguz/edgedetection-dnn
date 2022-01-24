@@ -85,7 +85,7 @@ class Processing():
         w_kps = cv2.drawKeypoints(self.out, kp1, None, color=(0, 255, 0), flags=0)
 
         # Stack frames
-        concatenate = np.concatenate((frame, self.out,w_kps), axis=1)
+        concatenate = np.concatenate((frame, w_kps), axis=1)
 
         return concatenate
 
